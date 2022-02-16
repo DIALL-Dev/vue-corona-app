@@ -19,7 +19,7 @@ import coronaMixin from "@/mixins/coronaMixin";
 import moment from "moment";
 export default {
   name: "DomesticCases",
-  mixin: [coronaMixin],
+  mixins: [coronaMixin],
   components: {
     ChartGraph,
   },
@@ -57,7 +57,7 @@ export default {
       };
     },
     domesticCompare() {
-      const lastMonth = this.domesticData[this.domesticData.lengh - 1] || {};
+      const lastMonth = this.domesticData[this.domesticData.length - 1] || {};
       const deaths = lastMonth.Deaths;
       const confirmed = lastMonth.Confirmed;
       const data = [deaths, confirmed];
